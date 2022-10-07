@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+:root {
+  --primaryColor: #9e0059;
+  --secondaryColor: #8ac926;
+  --darkColor: black;
+  --lightColor: #aab3c3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--lightColor);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--darkColor);
+  border-radius: 18px;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-output-display {
+  padding: 16px;
+  text-align: right;
+  background-color: white;
+  color: var(--darkColor);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+span {
+  font-size: 16px;
+  color: var(--lightColor);
+}
+
+button {
+  border: 1px solid var(--lightColor);
+  /* border: none; */
+  outline: none;
+ background-color: var(--darkColor);
+  color: var(--primaryColor);
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  /* transition: 0.4s; */
+}
+
+/* button:hover {
+  opacity: 0.9;
+} */
+
+.operators {
+  display: flex;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  color: var(--secondaryColor);
+  font-weight: 700;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
 }
